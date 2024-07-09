@@ -219,6 +219,10 @@ background-size: 100% 88%;
 color: var(--secondary);
 }
 
+.about {
+    flex-direction: column;
+}
+
 footer {
     text-align: center;
 }
@@ -226,17 +230,49 @@ footer {
 /* portfolio project images */
 /* TODO: Add portfolio project images here*/
 #proj-img-1 {
-
+    background-image: url("../images/p1.png");
+    background-size: contain;
 }
+
+#proj-img-2 {
+    background-image: url("../images/JS.png");
+    background-size: contain;
+}
+
+#proj-img-3 {
+    background-image: url("../images/coming-soon-1.jpg");
+    background-size: contain;
+}
+
+#proj-img-4 {
+    background-image: url("../images/coming-soon-2.jpg");
+    background-size: contain;
+}
+
+#proj-img-5 {
+    background-image: url("../images/coming-soon-3.jpg");
+    background-size: contain;
+}
+
 
 /* media queries */
 
 /* TODO: add media query for a max-width of 980px */
 @media screen and (max-width: 980px) {
-
+    .flex-container {
+        flex-direction: column;
+    }
 }
 
-/* TODO: add media query for a max-width of 768px */
+/* TODO: add media query for a max-width of 768px, portfolio should be in columns with same height*/
 @media screen and (max-width: 768px) {
-    
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item:first-child, .flex-item {
+        min-height: 200px;
+        height: 200px;
+        flex-basis: 200px;
+    }
 }
